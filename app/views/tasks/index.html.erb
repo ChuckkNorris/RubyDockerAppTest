@@ -5,9 +5,9 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:Description) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th>The ID</th>
+      <th>The Description</th>
+      <th>The Creation Date</th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -18,7 +18,6 @@
         <td><%= task.Description %></td>
         <td><%=l task.created_at %></td>
         <td>
-          <a class="btn btn-default btn-xs" href="/tasks/{task.id}">{task.name}</a>
           <%= link_to t('.show', :default => t("helpers.links.show")),
                       task_path(task), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
